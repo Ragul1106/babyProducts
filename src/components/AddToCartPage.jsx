@@ -1,10 +1,13 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import { FaTrash, FaTag } from "react-icons/fa";
 
 const Cart = () => {
+    useEffect(() => {
+              document.title = 'Cart | Earthbuds';
+          }, []);
   const navigate = useNavigate();
   const {
     cartItems,

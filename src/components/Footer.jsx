@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const Footer = () => (
   <footer className="bg-[#b0e4f4] py-6 text-sm  text-gray-700">
     <div className="max-w-screen-xl grid grid-cols-1 md:grid-cols-4 gap-8 px-6 lg:px-20">
@@ -34,7 +35,7 @@ const Footer = () => (
         </h4>
         <ul className="mt-4 space-y-2 text-left">
           <li>
-            <Link to="/shipping-policy" className="hover:text-[#faf8f8] cursor-pointer">
+            <Link to="/shipping" className="hover:text-[#faf8f8] cursor-pointer">
               Shipping & Return Policies
             </Link>
           </li>
@@ -58,19 +59,19 @@ const Footer = () => (
         <ul className="mt-4 space-y-2 text-left">
           {/* <Link to="/contact" className="hover:text-[#faf8f8]"> */}
           <li className="space-y-2">
-              For Sale: Earthbubs@co.in
+            For Sale: Earthbubs@co.in
           </li>
           <li>
-              Call: +91 1234567890
+            Call: +91 1234567890
           </li>
           <li>
-              For Complaints: 1800 202 2222
+            For Complaints: 1800 202 2222
           </li>
           <li>
-              Chat Time: Mon to Sat from 9AM to 8PM
+            Chat Time: Mon to Sat from 9AM to 8PM
           </li>
           <li>
-              For Complaints: Ebcustomercare.com
+            For Complaints: Ebcustomercare.com
           </li>
           {/* </Link> */}
         </ul>
@@ -81,17 +82,33 @@ const Footer = () => (
           FOLLOW US
         </h4>
         <div className="mt-4 flex gap-4 text-xl">
-          <Link to="/instagram" className="hover:text-[#faf8f8]">
+          <a
+            href="https://www.instagram.com/accounts/login/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#faf8f8]"
+          >
             <i className="fab fa-instagram"></i>
-          </Link>
-          <Link to="/facebook" className="hover:text-[#faf8f8]">
+          </a>
+          <a
+            href="https://www.facebook.com/login/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#faf8f8]"
+          >
             <i className="fab fa-facebook"></i>
-          </Link>
-          <Link to="/twitter" className="hover:text-[#faf8f8]">
+          </a>
+          <a
+            href="https://twitter.com/i/flow/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#faf8f8]"
+          >
             <i className="fab fa-twitter"></i>
-          </Link>
+          </a>
         </div>
       </div>
+
     </div>
 
     <hr className="border-gray-900 my-4 mx-20" />

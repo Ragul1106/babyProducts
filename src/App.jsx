@@ -10,6 +10,7 @@ import Home from "./components/Home";
 import AboutUsSection from "./components/AboutUs";
 import Contact from "./components/Contact";
 import Offer from "./components/OfferPage";
+import FaqSection from "./components/FaqSection";
 import CheckoutPage from "./components/CheckoutPage";
 import OrderComplete from "./components/OrderComplete";
 import Payment from "./components/PaymentPage";
@@ -20,6 +21,10 @@ import Soap from "./components/SoapPage";
 import Pampers from "./components/PampersPage";
 import Stroller from "./components/StrollerPage";
 import Bottle from "./components/BottlePage";
+import ShippingAndRefund from "./components/Shipping";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import AboutEarthBuds from "./components/AboutEarthBuds";
+import BulkPurchase from "./components/BulkPurchase";
 
 
 function App() {
@@ -45,6 +50,11 @@ function App() {
             <Route path="/order-complete" element={<OrderComplete />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/cart" element={<AddToCart />} />
+            <Route path="/faq" element={<FaqSection />} />
+            <Route path="/shipping" element={<ShippingAndRefund />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/about-store" element={<AboutEarthBuds />} />
+            <Route path="/bulk-purchase" element={<BulkPurchase />} />
           </Routes>
           <Footer />
         </CartProvider>

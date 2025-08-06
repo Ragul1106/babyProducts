@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
@@ -14,6 +14,9 @@ import returnIcon from "../assets/images/return.png";
 import { CartContext } from "../context/CartContext";
 
 const Checkout = () => {
+  useEffect(() => {
+            document.title = 'Checkout | Earthbuds';
+        }, []);
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
 

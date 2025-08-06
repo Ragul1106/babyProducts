@@ -1,4 +1,4 @@
-import React from 'react';
+import React  , { useEffect } from 'react';
 import FeaturedCategories from '../components/FeaturedCategories';
 import banner from '../assets/images/banner1.png';
 import dots from '../assets/images/dots.png';
@@ -11,6 +11,9 @@ import Pampers from '../components/Pampers';
 import Testimonials from '../components/Testimonials';
 
 function Home() {
+   useEffect(() => {
+          document.title = 'Home | Earthbuds';
+      }, []);
   return (
     <div>
       <div className="w-full">

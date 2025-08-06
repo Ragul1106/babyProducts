@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 import Contact from "../assets/images/contactImage.png";
 
 const ContactPage = () => {
+    useEffect(() => {
+              document.title = 'Contact | Earthbuds';
+          }, []);
     return (
         <section className="flex flex-col md:flex-row items-center justify-around gap-8 p-6 md:p-16 bg-[#f3f3f3]">
            

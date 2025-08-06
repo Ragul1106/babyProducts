@@ -4,6 +4,9 @@ import orderImage from '../assets/images/order.png';
 import { Link, useNavigate } from 'react-router-dom';
 
 const OrderComplete = () => {
+     useEffect(() => {
+            document.title = 'Order Complete | Earthbuds';
+        }, []);
     const [showConfetti, setShowConfetti] = useState(true);
     const [windowSize, setWindowSize] = useState({
         width: window.innerWidth,

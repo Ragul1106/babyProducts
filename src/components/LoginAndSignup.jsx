@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import baby from "../assets/images/babyimg.png";
 
 const AuthPage = () => {
+   useEffect(() => {
+          document.title = 'Login | Earthbuds';
+      }, []);
   const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -93,7 +96,7 @@ const AuthPage = () => {
               required
             />
 
-            <div className="flex flex-row gap-8 mt-5">
+            <div className="flex flex-row gap-3 md:gap-4 mt-5">
               <button
                 type="submit"
                 className="bg-[#2fd4e6] hover:bg-[#b0e4f4] text-black cursor-pointer py-2 md:py-3 px-10 rounded text-xl"
@@ -153,7 +156,7 @@ const AuthPage = () => {
             <div className="flex items-center justify-center">
               <button
                 type="button"
-                className="border flex items-center cursor-pointer gap-2 justify-center w-full py-2 rounded hover:bg-gray-100 text-sm"
+                className="border flex items-center disabled cursor-not-allowed gap-2 justify-center w-full py-2 rounded hover:bg-gray-100 text-sm"
               >
                 <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                   <path

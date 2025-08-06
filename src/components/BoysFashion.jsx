@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useDropdown } from "../context/DropdownContext";
@@ -7,6 +7,9 @@ import FilterMenu from "../components/FilterMenu";
 import '../App.css';
 
 const BoysFashion = ({ product }) => {
+    useEffect(() => {
+            document.title = 'Boys Fashion | Earthbuds';
+        }, []);
   const navigate = useNavigate();
 
   const handleBuyClick = () => {
@@ -100,6 +103,7 @@ const BoysFashionBox = ({ selectedFilter }) => {
 };
 
 const BoysFashionList = () => {
+
   const { openDropdown } = useDropdown();
   const [selectedFilter, setSelectedFilter] = useState(null);
 

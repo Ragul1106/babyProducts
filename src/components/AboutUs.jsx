@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaLeaf, FaUserMd, FaHeart, FaGlobe, FaSmile } from "react-icons/fa";
 import logo from "../assets/images/logo.png";
 
 const AboutUsSection = () => {
+    useEffect(() => {
+              document.title = 'About Us | Earthbuds';
+          }, []);
   return (
     <section className="max-w-5xl mx-auto px-4 py-12">
       <div className="text-lg font-medium space-x-2">
