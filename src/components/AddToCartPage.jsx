@@ -106,7 +106,7 @@ const Cart = () => {
       ))}
 
       <div className="flex flex-col md:flex-row justify-between gap-10 w-full items-start text-sm md:text-base">
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-16 w-full md:w-[40%]">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-14 w-full md:w-[40%]">
           <div className="flex items-center bg-[#c5f6fa] px-3 py-2 rounded-lg w-full md:w-auto">
             <FaTag className="mr-2 text-cyan-700" />
             <input
