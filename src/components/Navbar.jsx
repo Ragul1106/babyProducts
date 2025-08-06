@@ -6,14 +6,13 @@ import logo from "../assets/images/logo.png";
 import addToCart from "../assets/images/addToCart.png";
 import Cart from "../assets/images/cart1.png";
 import login from "../assets/images/login.png";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaSearch  } from "react-icons/fa";
 
 const Navbar = () => {
   const location = useLocation();
   const { activeDropdown, openDropdown } = useDropdown();
   const dropdownRef = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
-  // const [showProducts, setShowProducts] = useState(false);
   const { cartItems } = useContext(CartContext);
  
 
@@ -72,12 +71,12 @@ const Navbar = () => {
               </button>
 
               {activeDropdown === "products" && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-50">
+                <div className="absolute top-full left-0 mt-2 w-48 bg-[#d4eefa] border rounded-md shadow-lg z-50">
                   {["pampers", "boys-fashion", "girls-fashion", "soap", "stroller", "bottle"].map((item) => (
                     <Link
                       to={`/${item}`}
                       key={item}
-                      className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
+                      className="block px-4 py-2 mb-1 mt-1 border border-cyan-500 rounded bg-white hover:bg-[#20d4f6] hover:text-white"
                       onClick={handleDropdownItemClick}
                     >
                       {item.replace("-", " ").replace(/\b\w/g, (l) => l.toUpperCase())}
@@ -101,7 +100,7 @@ const Navbar = () => {
               className="border-2 rounded-md border-[#b0e4fe] py-2 pl-3 pr-8 w-full focus:outline-none text-sm"
             />
             <button className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-sky-500">
-              🔍
+              <FaSearch />
             </button>
           </div>
 

@@ -30,7 +30,7 @@ const Offer = ({ product }) => {
           <div className="absolute bottom-[95px] right-2 z-50">
             <button 
               onClick={handleBuyClick} 
-              className="bg-[#00b4d8] text-xs sm:text-sm lg:text-base font-bold px-5 py-1 rounded-2xl shadow"
+              className="bg-[#00b4d8] text-xs sm:text-sm cursor-pointer lg:text-base font-bold px-5 py-1 rounded-2xl shadow"
             >
               Buy
             </button>

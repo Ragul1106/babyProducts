@@ -46,14 +46,16 @@ const OrderComplete = () => {
             <div className="text-lg font-medium space-x-2 pl-10 pt-6 text-left">
                 <Link to="/" className="hover:text-sky-500">Home</Link>
                 <span>›</span>
-                <span
+                {/* <span
                     className="hover:text-sky-500 cursor-pointer"
                     onClick={() => navigate('/cart')}
                 >
                     Add To Cart
-                </span>
+                </span> */}
+                <span>Add To Cart</span>
                 <span>›</span>
-                <span className="hover:text-sky-500 cursor-pointer" onClick={() => navigate('/payment')}>Payments</span>
+                <span>Payment</span>
+                {/* <span className="hover:text-sky-500 cursor-pointer" onClick={() => navigate('/payment')}>Payments</span> */}
                 <span>›</span>
                 <span>Order Complete</span>
             </div>
@@ -70,7 +72,7 @@ const OrderComplete = () => {
                 <p className="mt-1 text-lg text-gray-600">
                     Order ID: <strong>OCD1232</strong>
                 </p>
-                <h1 className="text-3xl md:text-4xl font-bold text-blue-800 mt-2">
+                <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mt-2">
                     Your Order Is Completed!
                 </h1>
                 <p className="mt-4 text-gray-500 max-w-xl">

@@ -6,7 +6,8 @@ import paymentOptions from "../assets/images/payment.png";
 
 const Payment = () => {
   const navigate = useNavigate();
-  const { subtotal, discount, total } = useContext(CartContext);
+  const { subtotal, discount, total, clearCart } = useContext(CartContext);
+
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -47,6 +48,7 @@ const Payment = () => {
     }
 
     if (paymentMethod === "cash") {
+      clearCart();
       navigate("/order-complete");
     } else {
       alert("Online payment not implemented yet.");
@@ -106,8 +108,6 @@ const Payment = () => {
           </label>
         </div>
 
-
-        {/* Right Payment Summary Section */}
         <div className="w-full md:w-1/3 h-[65vh] border border-cyan-100 rounded-lg px-6 py-8">
           <h2 className="text-lg font-semibold mb-4">Cart Total</h2>
 

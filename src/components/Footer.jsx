@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => (
-  <footer className="bg-[#b0e4f4] py-6 text-sm text-gray-700">
-    <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
+  <footer className="bg-[#b0e4f4] py-6 text-sm  text-gray-700">
+    <div className="max-w-screen-xl grid grid-cols-1 md:grid-cols-4 gap-8 px-6 lg:px-20">
 
       <div>
         <h4 className="font-bold mb-2  relative inline-block after:block after:w-50 after:border-t-2 after:border-gray-500 after:mt-1">
