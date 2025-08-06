@@ -60,7 +60,7 @@ const AuthPage = () => {
       "Baby products user",
       JSON.stringify({ name, email, password })
     );
-
+    localStorage.setItem("isLoggedIn", "true");
     navigate("/");
   };
 
