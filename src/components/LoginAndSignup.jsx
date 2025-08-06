@@ -60,7 +60,7 @@ const AuthPage = () => {
       JSON.stringify({ name, email, password })
     );
 
-    navigate("/home");
+    navigate("/");
   };
 
   return (

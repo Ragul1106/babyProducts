@@ -15,12 +15,15 @@ const FeaturedCategories = () => {
   ];
 
   return (
-    <div className="py-8 px-4">
-      <h2 className="text-2xl font-bold text-center mb-6">
+    <div className=" py-10 px-4 max-w-1xl mx-auto">
+      <div className="text-center">
+      <h2 className="text-4xl font-bold mb-4">Featured Categories</h2>
+      <p className="text-md font-bold text-center mb-6">
         Everything Your Baby Needs
-      </h2>
+      </p>
+      </div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-6">
+      <div className="flex flex-col xl:flex-row lg:flex-row items-center justify-center gap-6">
         {images.map((item, index) => (
           <Link
             key={index}

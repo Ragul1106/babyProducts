@@ -6,7 +6,7 @@ import logo from "../assets/images/logo.png";
 import addToCart from "../assets/images/addToCart.png";
 import Cart from "../assets/images/cart1.png";
 import login from "../assets/images/login.png";
-import { FaBars, FaTimes, FaSearch  } from "react-icons/fa";
+import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
 
 const Navbar = () => {
   const location = useLocation();
@@ -14,7 +14,7 @@ const Navbar = () => {
   const dropdownRef = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const { cartItems } = useContext(CartContext);
- 
+
 
   const isCartPage = location.pathname === "/cart";
 
