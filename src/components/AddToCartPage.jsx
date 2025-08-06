@@ -1,13 +1,14 @@
 import { useContext, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
-import { FaTrash, FaTag } from "react-icons/fa";
+import { FaTag } from "react-icons/fa";
 
 const Cart = () => {
-    useEffect(() => {
-              document.title = 'Cart | Earthbuds';
-          }, []);
+
+  useEffect(() => {
+    document.title = 'Cart | Earthbuds';
+  }, []);
+
   const navigate = useNavigate();
   const {
     cartItems,
@@ -19,6 +20,16 @@ const Cart = () => {
     subtotal,
     total,
   } = useContext(CartContext);
+
+  const handleCheckout = () => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    if (!isLoggedIn) {
+      alert("Please login to proceed to checkout.");
+      navigate("/login");
+    } else {
+      navigate("/payment");
+    }
+  };
 
   const [localCoupon, setLocalCoupon] = useState(coupon);
 
@@ -149,7 +160,7 @@ const Cart = () => {
           <div className="flex justify-center">
             <button
               className="w-48 mt-3 bg-cyan-500 hover:bg-cyan-600 cursor-pointer py-2 rounded-lg"
-              onClick={() => navigate("/payment")}
+              onClick={handleCheckout}
             >
               Proceed to Checkout
             </button>

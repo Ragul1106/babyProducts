@@ -5,6 +5,7 @@ import { CartContext } from "../context/CartContext";
 import logo from "../assets/images/logo.png";
 import addToCart from "../assets/images/addToCart.png";
 import Cart from "../assets/images/cart1.png";
+import login1 from "../assets/images/login1.png";
 import login from "../assets/images/login.png";
 import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
 
@@ -16,6 +17,7 @@ const Navbar = () => {
   const { cartItems } = useContext(CartContext);
 
   const isCartPage = location.pathname === "/cart";
+  const isLogin = location.pathname === "/login";
 
   const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
@@ -66,7 +68,7 @@ const Navbar = () => {
 
     if (match) {
       navigate(match.to);
-      setQuery(""); 
+      setQuery("");
     } else {
       setNotFoundMessage(
         "No results found."
@@ -157,7 +159,7 @@ const Navbar = () => {
               alt="Cart"
             />
             {cartCount > 0 && (
-              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 bg-[#2fb4ce] text-black text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">
                 {cartCount}
               </span>
             )}
@@ -169,7 +171,11 @@ const Navbar = () => {
               to="/login"
               className="text-sky-500 text-xl font-bold flex items-center gap-1"
             >
-              <img src={login} className="w-8" alt="login" />
+              <img
+                src={isLogin ? login1 : login}
+                className="w-8"
+                alt="Cart"
+              />
             </Link>
           </button>
         </div>

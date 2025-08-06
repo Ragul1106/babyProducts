@@ -14,9 +14,11 @@ import returnIcon from "../assets/images/return.png";
 import { CartContext } from "../context/CartContext";
 
 const Checkout = () => {
+
   useEffect(() => {
             document.title = 'Checkout | Earthbuds';
         }, []);
+
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
 
@@ -103,14 +105,11 @@ const Checkout = () => {
           </div>
         </div>
 
-        {/* RIGHT SIDE */}
         <div className="w-full lg:w-[35%] space-y-4 lg:space-y-3 text-[16px] sm:text-[17px] leading-relaxed mt-8 lg:mt-0">
-          {/* Title */}
           <h1 className="text-2xl sm:text-3xl lg:text-2xl font-bold">
             New Born Pampers Active Baby Diapers, Small, 22 Count & Pampers Baby Dry Diapers
           </h1>
 
-          {/* Rating */}
           <div className="flex items-center gap-2 text-yellow-400">
             {Array.from({ length: 5 }, (_, i) => (
               <FaStar key={i} className={i < product.rating ? "" : "text-gray-300"} />
@@ -121,7 +120,6 @@ const Checkout = () => {
             </span>
           </div>
 
-          {/* Description */}
           <p className="text-gray-700 font-semibold text-base">
             Give your baby the gentle care they deserve with EarthBubs Premium Baby Pampers, designed for
             all-day comfort and protection. Crafted with ultra-soft, breathable materials, these diapers keep
@@ -130,7 +128,6 @@ const Checkout = () => {
             baby moves and plays. Plus, a built-in wetness indicator makes changing time easier than ever.
           </p>
 
-          {/* Colors & Size */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-10 text-sm sm:text-base font-medium">
             <div className="flex items-center gap-4">
               <p className="mb-0">Colours:</p>
@@ -146,7 +143,6 @@ const Checkout = () => {
             </div>
           </div>
 
-          {/* Price */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-6 mt-2">
             <span className="text-gray-400 font-bold line-through text-lg">
               MRP ₹{product.mrp.toFixed(2)}
@@ -156,12 +152,11 @@ const Checkout = () => {
             </span>
           </div>
 
-          {/* Quantity & Buy */}
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
             <div className="flex items-center gap-2 border px-3 py-2 rounded-xl shadow-sm">
               <button
                 onClick={decrement}
-                className="w-9 h-9 border rounded-lg flex items-center justify-center text-xl font-bold bg-cyan-200"
+                className="w-9 h-9 border cursor-pointer rounded-lg flex items-center justify-center text-xl font-bold bg-cyan-200"
               >
                 -
               </button>
@@ -174,7 +169,7 @@ const Checkout = () => {
               />
               <button
                 onClick={increment}
-                className="w-9 h-9 border rounded-lg flex items-center justify-center text-xl font-bold bg-cyan-200"
+                className="w-9 h-9 border cursor-pointer rounded-lg flex items-center justify-center text-xl font-bold bg-cyan-200"
               >
                 +
               </button>
@@ -182,13 +177,12 @@ const Checkout = () => {
 
             <button
               onClick={handleBuyNow}
-              className="bg-[#00b4d8] hover:bg-[#009ec2] text-white px-6 sm:px-8 py-2 rounded-xl font-semibold text-base shadow mt-2 sm:mt-0"
+              className="bg-[#00b4d8] hover:bg-[#009ec2] cursor-pointer text-white px-6 sm:px-8 py-2 rounded-xl font-semibold text-base shadow mt-2 sm:mt-0"
             >
               Buy Now
             </button>
           </div>
 
-          {/* Delivery Info */}
           <div className="border border-cyan-500 mt-6 rounded-lg divide-y">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-between gap-3 px-4 py-3">
               <div className="flex items-center gap-3">

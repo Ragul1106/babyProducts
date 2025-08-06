@@ -22,6 +22,7 @@ const AuthPage = () => {
       storedUser.email === email &&
       storedUser.password === password
     ) {
+      localStorage.setItem("isLoggedIn", "true");
       navigate("/");
     } else {
       setError("User does not exist. Redirecting to signup...");
