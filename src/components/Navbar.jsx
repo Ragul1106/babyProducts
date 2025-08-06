@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useDropdown } from "../context/DropdownContext";
 import { CartContext } from "../context/CartContext";
 import logo from "../assets/images/logo.png";
@@ -14,7 +14,6 @@ const Navbar = () => {
   const dropdownRef = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const { cartItems } = useContext(CartContext);
-
 
   const isCartPage = location.pathname === "/cart";
 
@@ -45,6 +44,41 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [openDropdown]);
 
+  const productRoutes = [
+    { to: "/pampers", label: "Pampers" },
+    { to: "/boys-fashion", label: "Boy's Fashions" },
+    { to: "/girls-fashion", label: "Girl's Fashions" },
+    { to: "/soap", label: "Soap" },
+    { to: "/stroller", label: "Stroller" },
+    { to: "/bottle", label: "Bottle" },
+  ];
+
+  const [query, setQuery] = useState("");
+  const [notFoundMessage, setNotFoundMessage] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    const cleaned = query.trim().toLowerCase();
+
+    const match = productRoutes.find(({ label }) =>
+      label.toLowerCase().includes(cleaned)
+    );
+
+    if (match) {
+      navigate(match.to);
+      setQuery(""); 
+    } else {
+      setNotFoundMessage(
+        "No results found."
+      );
+
+      setTimeout(() => setNotFoundMessage(""), 5000);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") handleSearch();
+  };
   return (
     <header className="bg-white shadow sticky top-0 z-70">
       <div className="container mx-auto flex justify-between items-center px-4 py-3">
@@ -97,11 +131,23 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search..."
-              className="border-2 rounded-md border-[#b0e4fe] py-2 pl-3 pr-8 w-full focus:outline-none text-sm"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={handleKeyDown}
+              className="border-2 rounded-md border-cyan-500 py-2 pl-3 pr-10 w-full focus:outline-none text-base"
             />
-            <button className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-sky-500">
+            <button
+              onClick={handleSearch}
+              className="absolute right-3 top-1/2 cursor-pointer transform -translate-y-1/2 text-gray-600 hover:text-sky-500"
+            >
               <FaSearch />
             </button>
+            {notFoundMessage && (
+              <div
+                className="mt-2 text-sm text-red-600 border border-red-300 bg-red-50 p-3 rounded"
+                dangerouslySetInnerHTML={{ __html: notFoundMessage }}
+              />
+            )}
           </div>
 
           <Link to="/cart" className="relative">

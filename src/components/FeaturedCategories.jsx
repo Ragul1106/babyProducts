@@ -15,7 +15,7 @@ const FeaturedCategories = () => {
   ];
 
   return (
-    <div className=" py-10 px-4 max-w-1xl mx-auto">
+    <div className=" py-10 px-4 ">
       <div className="text-center">
       <h2 className="text-4xl font-bold mb-4">Featured Categories</h2>
       <p className="text-md font-bold text-center mb-6">
@@ -23,7 +23,8 @@ const FeaturedCategories = () => {
       </p>
       </div>
 
-      <div className="flex flex-col xl:flex-row lg:flex-row items-center justify-center gap-6">
+      <div className="flex flex-col xl:flex-row lg:flex-row items-center justify-center gap-12 xl:gap-14">
+
         {images.map((item, index) => (
           <Link
             key={index}
