@@ -8,7 +8,7 @@ import '../App.css';
 
 const BoysFashion = ({ product }) => {
     useEffect(() => {
-            document.title = 'Boys Fashion | Earthbuds';
+            document.title = 'Boys Fashion | Earthbubs';
         }, []);
   const navigate = useNavigate();
 

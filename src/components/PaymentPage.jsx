@@ -6,7 +6,7 @@ import paymentOptions from "../assets/images/payment.png";
 
 const Payment = () => {
    useEffect(() => {
-          document.title = 'Payment | Earthbuds';
+          document.title = 'Payment | Earthbubs';
       }, []);
   const navigate = useNavigate();
   const { subtotal, discount, total, clearCart } = useContext(CartContext);

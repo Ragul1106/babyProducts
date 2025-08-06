@@ -2,11 +2,13 @@ import { useContext, useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import { FaTag } from "react-icons/fa";
+import { toast } from "react-toastify";
+
 
 const Cart = () => {
 
   useEffect(() => {
-    document.title = 'Cart | Earthbuds';
+    document.title = 'Cart | Earthbubs';
   }, []);
 
   const navigate = useNavigate();
@@ -23,8 +25,14 @@ const Cart = () => {
 
   const handleCheckout = () => {
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+    if (cartItems.length === 0) {
+      toast.error("Your cart is empty. Please add products before proceeding.");
+      return;
+    }
+
     if (!isLoggedIn) {
-      alert("Please login to proceed to checkout.");
+      toast.error("Please login to proceed to checkout.");
       navigate("/login");
     } else {
       navigate("/payment");

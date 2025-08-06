@@ -4,7 +4,7 @@ import baby from "../assets/images/babyimg.png";
 
 const AuthPage = () => {
    useEffect(() => {
-          document.title = 'Login | Earthbuds';
+          document.title = 'Login | Earthbubs';
       }, []);
   const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState("");

@@ -16,7 +16,7 @@ import { CartContext } from "../context/CartContext";
 const Checkout = () => {
 
   useEffect(() => {
-    document.title = 'Checkout | Earthbuds';
+    document.title = 'Checkout | Earthbubs';
   }, []);
 
   const navigate = useNavigate();

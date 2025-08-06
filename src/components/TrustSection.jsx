@@ -11,13 +11,13 @@ const TrustSection = () => {
       <h2 className="text-3xl md:text-5xl font-bold mb-2">Why Parents Trust Us</h2>
       <p className="font-semibold text-lg md:text-2xl my-8">Designed with Love. Backed by Science.</p>
 
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-6">
         {[trust1, trust2, trust3, trust4, trust5].map((img, index) => (
           <div key={index} className="flex-shrink-0">
             <img
               src={img}
               alt={`trust${index + 1}`}
-              className="w-52 h-auto object-contain mx-auto"
+              className="w-50 h-auto object-contain mx-auto"
             />
           </div>
         ))}

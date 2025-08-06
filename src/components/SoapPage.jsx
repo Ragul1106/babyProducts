@@ -8,7 +8,7 @@ import '../App.css';
 
 const Soap = ({ product }) => {
    useEffect(() => {
-          document.title = 'Soaps | Earthbuds';
+          document.title = 'Soaps | Earthbubs';
       }, []);
     const navigate = useNavigate();
 

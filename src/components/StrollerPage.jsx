@@ -8,7 +8,7 @@ import '../App.css';
 
 const Stroller = ({ product }) => {
    useEffect(() => {
-          document.title = 'Strollers | Earthbuds';
+          document.title = 'Strollers | Earthbubs';
       }, []);
    const navigate = useNavigate();
 

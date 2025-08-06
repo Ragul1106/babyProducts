@@ -8,7 +8,7 @@ import '../App.css';
 
 const Offer = ({ product }) => {
    useEffect(() => {
-          document.title = 'Offers | Earthbuds';
+          document.title = 'Offers | Earthbubs';
       }, []);
   const navigate = useNavigate();
  

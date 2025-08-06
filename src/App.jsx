@@ -25,10 +25,13 @@ import ShippingAndRefund from "./components/Shipping";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import AboutEarthBuds from "./components/AboutEarthBuds";
 import BulkPurchase from "./components/BulkPurchase";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
   return (
+    <>
     <BrowserRouter>
       <DropdownProvider>
         <CartProvider>
@@ -60,6 +63,8 @@ function App() {
         </CartProvider>
       </DropdownProvider>
     </BrowserRouter>
+    <ToastContainer position="top-center" autoClose={3000} />
+    </>
   );
 }
 

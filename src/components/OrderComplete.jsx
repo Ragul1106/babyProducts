@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const OrderComplete = () => {
      useEffect(() => {
-            document.title = 'Order Complete | Earthbuds';
+            document.title = 'Order Complete | Earthbubs';
         }, []);
     const [showConfetti, setShowConfetti] = useState(true);
     const [windowSize, setWindowSize] = useState({

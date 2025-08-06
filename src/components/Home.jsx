@@ -12,7 +12,7 @@ import Testimonials from '../components/Testimonials';
 
 function Home() {
    useEffect(() => {
-          document.title = 'Home | Earthbuds';
+          document.title = 'Home | Earthbubs';
       }, []);
   return (
     <div>

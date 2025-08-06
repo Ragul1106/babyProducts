@@ -55,6 +55,17 @@ const Navbar = () => {
     { to: "/bottle", label: "Bottle" },
   ];
 
+ const productPaths = [
+  "/pampers",
+  "/boys-fashion",
+  "/girls-fashion",
+  "/soap",
+  "/stroller",
+  "/bottle",
+];
+
+const isProductActive = productPaths.includes(location.pathname);
+
   const [query, setQuery] = useState("");
   const [notFoundMessage, setNotFoundMessage] = useState("");
   const navigate = useNavigate();
@@ -83,7 +94,7 @@ const Navbar = () => {
   };
   return (
     <header className="bg-white shadow sticky top-0 z-70">
-      <div className="container mx-auto flex justify-between items-center px-4 py-3">
+      <div className="container mx-auto flex justify-between items-center px-4 py-2">
         <Link
           to="/"
           className="text-sky-500 text-xl font-bold flex items-center gap-1"
@@ -95,13 +106,25 @@ const Navbar = () => {
 
 
         <nav className="hidden md:flex gap-6 text-gray-700 font-medium relative">
-          <Link to="/" className="hover:text-sky-500">Home</Link>
+          <Link
+            to="/"
+            className={`relative transition-all ${location.pathname === "/"
+                ? "bg-gradient-to-b from-white to-[#b0e4f6] text-black rounded-t-md px-4 py-2 border-b-4 border-cyan-400"
+                : ""
+              }`}
+          >
+            Home
+          </Link>
+
 
           <div className="relative" ref={dropdownRef}>
             <div className="relative group">
               <button
                 onClick={() => openDropdown("products")}
-                className="hover:text-sky-500 cursor-pointer"
+                className={`relative transition-all cursor-pointer ${isProductActive
+                ? "bg-gradient-to-b from-white to-[#b0e4f6] text-black cursor-pointer rounded-t-md px-4 py-2 border-b-4 border-cyan-400"
+                : ""
+              }`}
               >
                 Products
               </button>
@@ -123,9 +146,33 @@ const Navbar = () => {
             </div>
           </div>
 
-          <Link to="/offers" className="hover:text-sky-500">Offers</Link>
-          <Link to="/about" className="hover:text-sky-500">About</Link>
-          <Link to="/contact" className="hover:text-sky-500">Contacts</Link>
+          <Link
+            to="/offers"
+            className={`relative transition-all ${location.pathname === "/offers"
+                ? "bg-gradient-to-b from-white to-[#b0e4f6] text-black rounded-t-md px-4 py-2 border-b-4 border-cyan-400"
+                : ""
+              }`}
+          >
+            Offers
+          </Link>
+          <Link
+            to="/about"
+            className={`relative transition-all ${location.pathname === "/about"
+                ? "bg-gradient-to-b from-white to-[#b0e4f6] text-black rounded-t-md px-4 py-2 border-b-4 border-cyan-400"
+                : ""
+              }`}
+          >
+            About
+          </Link>
+          <Link
+            to="/contact"
+           className={`relative transition-all ${location.pathname === "/contact"
+                ? "bg-gradient-to-b from-white to-[#b0e4f6] text-black rounded-t-md px-4 py-2 border-b-4 border-cyan-400"
+                : ""
+              }`}
+          >
+            Contacts
+          </Link>
         </nav>
 
         <div className="flex items-center gap-4">
@@ -187,7 +234,6 @@ const Navbar = () => {
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
-      <hr />
 
       {menuOpen && (
         <nav className="md:hidden bg-white px-6 py-4 border-t space-y-3 text-gray-700">

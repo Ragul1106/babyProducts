@@ -3,7 +3,7 @@ import babyproduct from '../assets/images/logo.png';
 
 const AboutEarthBuds = () => {
       useEffect(() => {
-                document.title = 'About | Earthbuds';
+                document.title = 'About | Earthbubs';
             }, []);
   return (
     <div className="bg-pink-50 py-16 px-6 sm:px-10 lg:px-24 font-[Poppins]">
