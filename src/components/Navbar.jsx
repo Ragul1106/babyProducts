@@ -201,7 +201,7 @@ const isProductActive = productPaths.includes(location.pathname);
 
           <Link to="/cart" className="relative">
             <img
-              src={isCartPage ? Cart : addToCart}
+              src={isCartPage ? Cart : addToCart }
               className="w-8"
               alt="Cart"
             />
