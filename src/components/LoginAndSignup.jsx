@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import baby from "../assets/images/babyimg.png";
 
 const AuthPage = () => {
-   useEffect(() => {
-          document.title = 'Login | Earthbubs';
-      }, []);
+  useEffect(() => {
+    document.title = "Login | Earthbubs";
+  }, []);
+
   const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false); 
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -89,13 +92,23 @@ const AuthPage = () => {
               className="border-b-2 border-gray-400 focus:outline-none px-1 py-2 mt-3 text-sm"
               required
             />
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              className="border-b-2 border-gray-400 focus:outline-none px-1 py-2 text-sm"
-              required
-            />
+
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                placeholder="Password"
+                className="border-b-2 border-gray-400 focus:outline-none px-1 py-2 text-sm w-full pr-10"
+                required
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-0 top-1/2 cursor-pointer transform -translate-y-1/2 px-2 text-gray-600 text-xl focus:outline-none"
+              >
+                {showPassword ? <FaRegEyeSlash/> : <FaRegEye/>}
+              </button>
+            </div>
 
             <div className="flex flex-row gap-3 md:gap-4 mt-5">
               <button
@@ -105,7 +118,9 @@ const AuthPage = () => {
                 Log In
               </button>
               <div className="flex flex-col gap-2 text-xs text-gray-600 mt-1">
-                <span className="hover:underline cursor-pointer text-lg">Forget Password?</span>
+                <span className="hover:underline cursor-pointer text-lg">
+                  Forget Password?
+                </span>
               </div>
             </div>
 
@@ -139,13 +154,23 @@ const AuthPage = () => {
               className="border-b-2 border-gray-400 focus:outline-none px-1 py-2 text-sm"
               required
             />
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              className="border-b-2 border-gray-400 focus:outline-none px-1 py-2 text-sm"
-              required
-            />
+
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                placeholder="Password"
+                className="border-b-2 border-gray-400 focus:outline-none px-1 py-2 text-sm w-full pr-10"
+                required
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-0 top-1/2 cursor-pointer transform -translate-y-1/2 px-2 text-gray-500 text-xl focus:outline-none"
+              >
+                {showPassword ? <FaRegEyeSlash/> : <FaRegEye/>}
+              </button>
+            </div>
 
             <button
               type="submit"
