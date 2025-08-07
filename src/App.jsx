@@ -25,6 +25,7 @@ import ShippingAndRefund from "./components/Shipping";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import AboutEarthBuds from "./components/AboutEarthBuds";
 import BulkPurchase from "./components/BulkPurchase";
+import ForgetPassword from "./components/FrogetPassword";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -58,6 +59,8 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/about-store" element={<AboutEarthBuds />} />
             <Route path="/bulk-purchase" element={<BulkPurchase />} />
+            <Route path="/forget-password" element={<ForgetPassword />} />
+
           </Routes>
           <Footer />
         </CartProvider>

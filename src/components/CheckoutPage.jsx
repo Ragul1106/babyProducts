@@ -203,7 +203,12 @@ const Checkout = () => {
                   <p className="font-semibold">Return Delivery</p>
                   <p className="text-sm text-gray-600 font-semibold">
                     Free 7 Days Delivery Returns.{" "}
-                    <span className="underline cursor-pointer text-blue-600">Details</span>
+                    <span
+                        className="underline text-blue cursor-pointer text-blue-700"
+                        onClick={() => navigate("/shipping")}
+                    >
+                        Detials
+                    </span>
                   </p>
                 </div>
               </div>

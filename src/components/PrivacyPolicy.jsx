@@ -10,10 +10,10 @@ const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen px-4 sm:px-8 lg:px-24 py-10 bg-gray-50">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-        Privacy Policy – Baby Bliss Boutique
+        Privacy Policy – EarthBubs
       </h1>
       <p className="text-base text-gray-600 mb-8">
-        <span className="font-semibold">Effective Date:</span> 12/07/25
+        <span className="font-semibold">Effective Date:</span> 07/08/25
       </p>
 
       <h2 className="text-2xl font-semibold text-gray-800 mb-4">

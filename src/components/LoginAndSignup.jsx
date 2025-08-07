@@ -10,7 +10,7 @@ const AuthPage = () => {
 
   const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState("");
-  const [showPassword, setShowPassword] = useState(false); 
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -106,7 +106,7 @@ const AuthPage = () => {
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-0 top-1/2 cursor-pointer transform -translate-y-1/2 px-2 text-gray-600 text-xl focus:outline-none"
               >
-                {showPassword ? <FaRegEyeSlash/> : <FaRegEye/>}
+                {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
               </button>
             </div>
 
@@ -118,9 +118,13 @@ const AuthPage = () => {
                 Log In
               </button>
               <div className="flex flex-col gap-2 text-xs text-gray-600 mt-1">
-                <span className="hover:underline cursor-pointer text-lg">
+                <span
+                  className="hover:underline cursor-pointer text-lg"
+                  onClick={() => navigate("/forget-password")}
+                >
                   Forget Password?
                 </span>
+
               </div>
             </div>
 
@@ -168,7 +172,7 @@ const AuthPage = () => {
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-0 top-1/2 cursor-pointer transform -translate-y-1/2 px-2 text-gray-500 text-xl focus:outline-none"
               >
-                {showPassword ? <FaRegEyeSlash/> : <FaRegEye/>}
+                {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
               </button>
             </div>
 

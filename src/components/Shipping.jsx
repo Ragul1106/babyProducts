@@ -11,7 +11,7 @@ const ShippingAndRefund = () => {
         Shipping & Refund Policy – BabyCare Store
       </h1>
       <p className="text-base text-gray-600 mb-6">
-        <span className="font-semibold">Effective Date:</span> 12/07/25
+        <span className="font-semibold">Effective Date:</span> 18/08/25
       </p>
 
       <p className="text-lg text-gray-700 mb-8 leading-relaxed">
