@@ -71,7 +71,7 @@ const Payment = () => {
       <div className="flex flex-col md:flex-row gap-[10em] p-6 md:px-20">
 
 
-        <div className="w-full md:w-1/2 space-y-4 border border-cyan-100 rounded-lg p-6">
+        <div className="w-full md:w-1/2 space-y-4 border border-cyan-300 rounded-lg p-6">
 
 
           {[
@@ -111,7 +111,7 @@ const Payment = () => {
           </label>
         </div>
 
-        <div className="w-full md:w-1/3 h-[65vh] border border-cyan-100 rounded-lg px-6 py-8">
+        <div className="w-full md:w-1/3 h-[80vh] md:h-[70vh] border border-cyan-300 rounded-lg px-6 md:px-6 py-8 md:py-6">
           <h2 className="text-lg font-semibold mb-4">Cart Total</h2>
 
           <div className="flex justify-between mb-2">
@@ -130,8 +130,9 @@ const Payment = () => {
             <span>Shipping:</span>
             <span>Free</span>
           </div>
+          {/* <hr className="border-t-2 border-cyan-200 my-4" /> */}
 
-          <div className="flex justify-between font-semibold border-t border-cyan-200 pt-2 mb-1">
+          <div className="flex justify-between border-t border-cyan-300 font-semibold  pt-2 mb-1">
             <span>Total:</span>
             <span>₹ {total}</span>
           </div>
@@ -156,19 +157,14 @@ const Payment = () => {
               <span>Cash on delivery</span>
             </label>
           </div>
-
-
-
-
           <div className="flex justify-center">
             <button
-              className="w-48 mt-3 bg-cyan-500 hover:bg-cyan-600 py-2 rounded-lg"
+              className="w-48 mt-5   bg-cyan-500 hover:bg-cyan-600 py-2 rounded-lg"
               onClick={handleSubmit}
             >
               Place Order
             </button>
           </div>
-
         </div>
       </div>
     </div>

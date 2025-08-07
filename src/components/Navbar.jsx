@@ -255,7 +255,7 @@ const isProductActive = productPaths.includes(location.pathname);
           </details>
           <Link to="/offers" className="block" onClick={toggleMenu}>Offers</Link>
           <Link to="/about" className="block" onClick={toggleMenu}>About</Link>
-          <Link to="/contacts" className="block" onClick={toggleMenu}>Contacts</Link>
+          <Link to="/contact" className="block" onClick={toggleMenu}>Contacts</Link>
         </nav>
       )}
     </header>
