@@ -130,7 +130,6 @@ const Payment = () => {
             <span>Shipping:</span>
             <span>Free</span>
           </div>
-          {/* <hr className="border-t-2 border-cyan-200 my-4" /> */}
 
           <div className="flex justify-between border-t border-cyan-300 font-semibold  pt-2 mb-1">
             <span>Total:</span>
