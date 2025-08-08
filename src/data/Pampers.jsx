@@ -48,6 +48,7 @@ const products = [
   },
   {
     id: 106,
+    title: "Mee Pampers",
     images: [img6, img1, img5,img2],
     image: img6,
     price: 1300,
