@@ -60,7 +60,6 @@ function App() {
             <Route path="/about-store" element={<AboutEarthBuds />} />
             <Route path="/bulk-purchase" element={<BulkPurchase />} />
             <Route path="/forget-password" element={<ForgetPassword />} />
-
           </Routes>
           <Footer />
         </CartProvider>

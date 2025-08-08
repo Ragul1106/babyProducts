@@ -158,7 +158,7 @@ const Payment = () => {
           </div>
           <div className="flex justify-center">
             <button
-              className="w-48 mt-5   bg-cyan-500 hover:bg-cyan-600 py-2 rounded-lg"
+              className="w-48 mt-5 cursor-pointer bg-cyan-500 hover:bg-cyan-600 py-2 rounded-lg"
               onClick={handleSubmit}
             >
               Place Order

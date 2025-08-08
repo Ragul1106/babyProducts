@@ -3,8 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import { FaTag } from "react-icons/fa";
 import { toast } from "react-toastify";
-
-
 const Cart = () => {
 
   useEffect(() => {
