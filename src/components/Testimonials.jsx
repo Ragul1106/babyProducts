@@ -13,17 +13,17 @@ const Testimonials = () => {
         <img
           src={testimonial1}
           alt="Testimonial 1"
-          className="w-[90%] mx-auto h-auto rounded-xl mt-5 lg:scale-100 hover:scale-105 transition duration-300"
+          className="w-[90%] mx-auto h-auto rounded-xl mt-5"
         />
         <img
           src={testimonial2}
           alt="Testimonial 2"
-          className="w-[90%] mx-auto h-auto rounded-xl lg:scale-110 z-10 hover:scale-[1.2] transition duration-300"
+          className="w-[90%] mx-auto h-auto rounded-xl "
         />
         <img
           src={testimonial3}
           alt="Testimonial 3"
-          className="w-[90%] mx-auto h-auto rounded-xl mt-5 lg:scale-100 hover:scale-105 transition duration-300"
+          className="w-[90%] mx-auto h-auto rounded-xl mt-5 "
         />
       </div>
     </section>
